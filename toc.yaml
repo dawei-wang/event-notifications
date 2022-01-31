@@ -6,7 +6,6 @@ toc:
     audience: service
     href: /docs/event-notifications?topic=event-notifications-getting-started
     console-page: /catalog/services/event-notifications#about
-    product-page: https://ibm.com/cloud/product-value
     path: event-notifications
     label: Event Notifications
 
@@ -39,6 +38,7 @@ toc:
       - en-create-destination.md
       - en-create-subscription.md
       - en-create-source.md
+      - en-create-destination-fcm.md
 
 
   - navgroup:
