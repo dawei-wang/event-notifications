@@ -49,7 +49,7 @@ Use this tutorial to create an {site.data.keyword.en_short}} push destination co
 - Follow the instructions in the console to generate a google-services.json file from Google Firebase.
 - Download the file and add it to the root directory of your mobile app.
 
-![enerate google-services.json file](images/en-tut-dest-push-fcm3.png "Generate google-services.json file"){: caption="Figure 3. enerate google-services.json file" caption-side="bottom"}
+![Generate google-services.json file](images/en-tut-dest-push-fcm3.png "Generate google-services.json file"){: caption="Figure 3. Generate google-services.json file" caption-side="bottom"}
 
 ## Add the destination
 {: #en-destination-finish}
