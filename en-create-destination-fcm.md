@@ -18,9 +18,9 @@ completion-time: 10m
 {{site.data.keyword.attribute-definition-list}}
 
 # Create an {{site.data.keyword.en_short}} push destination for Android (FCM)
-{: #en-create-en-destination-push-fcm}
+{: #en-create-destination-push-fcm}
 
-Use this tutorial to create an {site.data.keyword.en_short}} push destination configured for Firebase Cloud Messaging (FCM) to send messages to Android devices.
+Use this tutorial to create an {{site.data.keyword.en_short}} push destination configured for Firebase Cloud Messaging (FCM) to send messages to Android devices.
 {: shortdesc}
 
 ## Create an Android Push Notifications destination
