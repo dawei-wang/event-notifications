@@ -1,7 +1,7 @@
 ---
 
   copyright:
-   years: 2015, 2020, 2022
+   years: 2015, 2022
  lastupdated: "2022-01-26"
 
   keywords: event notifications, event-notifications, tutorials, push, android, firebase, fcm
