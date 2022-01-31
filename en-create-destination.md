@@ -21,9 +21,10 @@ completion-time: 10m
 {: #en-create-en-destination}
 
 Destinations are custom protocols, which are either services or user reachable entities.
-Presently, {{site.data.keyword.en_short}} supports three destination types:
+Presently, {{site.data.keyword.en_short}} supports these destination types:
 - SMTP_IBM
 - SMS_IBM
+- Android Push Notification
 - Webhook
 {: shortdesc}
 
