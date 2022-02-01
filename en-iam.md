@@ -79,8 +79,9 @@ The following table details actions that are mapped to service access roles. Ser
 | Channel Editor| View, create, and delete {{site.data.keyword.en_short}} subscriptions| View, create, update, and delete {{site.data.keyword.en_short}} subscriptions |
 | Manager | View, edit, and delete data in an {{site.data.keyword.en_short}} instance |<ul><li>Perform all Writer actions</li> <li> Delete service instance data such as sources, rules, topics, channels</li></ul>|
 | Service Configuration Reader| Read services configuration for Governance management | View services configurations |
-| Event Source Manager | Source integration with{{site.data.keyword.en_short}} using service to service authorization | <ul><li>Perform service to service registration, of source</li><li>View, edit, and delete sources and events</li><li>Send notifications</li></ul> |
+| Event Source Manager | Source integration with {{site.data.keyword.en_short}} using service to service authorization | <ul><li>Perform service to service registration, of source</li><li>View, edit, and delete sources and events</li><li>Send notifications</li></ul> |
 | {{site.data.keyword.en_short}} Publisher | Create notification and view notifications count | Send notifications and view notifications count |
+Device Manager	 | Custom role to handle push device registration with the {{site.data.keyword.en_short}} service	} | <ul><li>View, Create, Edit and Delete Push Devices using {{site.data.keyword.en_short}} client sdk's. </li><li>View, Create and Delete Tags for Push Devices using {{site.data.keyword.en_short}} [APIS](https://test.cloud.ibm.com/apidocs/event-notifications/).  </li><li>View, Create and Delete Channel Groups for Push Devices using {{site.data.keyword.en_short}} [APIS](https://test.cloud.ibm.com/apidocs/event-notifications/).</li><li>View, Create and Delete Channels for Push Devices using {{site.data.keyword.en_short}} [APIS](https://test.cloud.ibm.com/apidocs/event-notifications/).</li></ul> |
 {: caption="Table 2. Actions mapping to service access roles" caption-side="top"}
 
 For more information about assigning user roles in the UI, see [Managing IAM access](/docs/account?topic=account-assign-access-resources).
@@ -120,15 +121,38 @@ The actions are customized and defined by the {{site.data.keyword.Bluemix_notm}}
 | `event-notifications.subscriptions.update` | `PUT /event-notifications/v1/instances/{instanceID}/subscriptions/{subscriptionID}`| Manager, Writer, Administrator, Channel-Editor | Update Subscription for Event Notifications instance |
 | `event-notifications.subscriptions.delete` | `DELETE /event-notifications/v1/instances/{instanceID}/subscriptions/{subscriptionID}`| Manager, Administrator, Channel-Editor| Delete Subscription from Event Notifications instance |
 | `event-notifications.subscriptions.list` | `GET /event-notifications/v1/instances/{instanceID}/subscriptions`| Manager, Reader, Writer, Administrator, Channel-Editor | Get All Subscriptions for Event Notifications instance  |
-| `event-notifications.notifications.post` | `POST /event-notifications/v1/instances/{{instance_id}}/notifications`| 	Manager, Writer, Administrator, Event-Source-Manager, Event-Notification-Publisher | Send Notification to Event Notifications instance  |
+| `event-notifications.notifications.post` | `POST /event-notifications/v1/instances/{{instance_id}}/notifications`| Manager, Writer, Administrator, Event-Source-Manager, Event-Notification-Publisher | Send Notification to Event Notifications instance |
 | `event-notifications.counts.get` | `GET /event-notifications/v1/instances/{instanceID}/counts`| Manager, Reader, Event-Source-Manager, Channel-Editor, Event-Notification-Publisher |Get All Notifications for Event Notifications instance  |
 | `event-notifications.events.create` | `GET /event-notifications/v1/instances/{instanceID}/events/{eventID}?sourceID=*`| Manager, Administrator, Event-Source-Manager| Get Event for Event Notifications instance |
 | `event-notifications.events.read` | `POST /event-notifications/v1/instances/{instanceID}/sources`| Manager, Administrator, Event-Source-Manager |   |
 | `event-notifications.events.list` | `GET /event-notifications/v1/instances/{instanceID}/events?sourceID=*`| Manager, Administrator, Event-Source-Manager | Get All Events for Event Notifications instance  |
 | `event-notifications.events.delete` | `DELETE /event-notifications/v1/instances/{instanceID}/events/{eventID}?sourceID=*`| Manager, Administrator, Event-Source-Manager | Delete Events from Event Notifications instance  |
+| `event-notifications.publickey.read` | `GET /event-notifications/v1/instances/{instanceID}/destinations/{destinationID}/public_key`| Manager, Reader, Writer, Administrator, Channel-Editor | Read publickey used for signing webhook  |
+| `event-notifications.severities.create` | `POST /event-notifications/v1/instances/{instanceID}/severities`| Event-Source-Manager | Create custom severities  |
+| `event-notifications.severities.read` | `GET /event-notifications/v1/instances/{instanceID}/severities/{severity_id}?sourceID=*`| Event-Source-Manager | Get a severity based on the source |
+| `event-notifications.severities.list` | `GET /event-notifications/v1/instances/{instanceID}/severities?sourceID=*`| Manager, Reader, Administrator, Event-Source-Manager| Get all severities based on the source  |
+| `event-notifications.severities.delete`| `DELETE /event-notifications/v1/instances/{instanceID}/severities/{severity_id}?sourceID=*` | Event-Source-Manager | Delete a severity based on the source  |
+| `event-notifications.email-status.create` | `POST /event-notifications/v1/instances/{instanceID}/email-status/sources/{sourceID}/notifications/{notificationID}`| Status-Reporter | Create/Update current status of a dispatched email  |
+| `event-notifications.sms-status.create` | `POST /event-notifications/v1/instances/{instanceID}/sms-status/sources/{sourceID}/notifications/{notificationID}`| Status-Reporter | Create/Update current status of a dispatched SMS  |
+| `event-notifications.webhook-status.create`| `POST /event-notifications/v1/instances/{instanceID}/webhook-status/sources/{sourceID}/notifications/{notificationID}` | Status-Reporter | Create/Update current status of a dispatched Webhook |
+| `event-notifications.devices.create`| `POST /event-notifications/v1/instances/{instanceID}/destinations/{id}/devices` | Manager, Administrator, Device-Manager | Create a new device under a push notifications FCM destination |
+| `event-notifications.devices.read`| `GET /event-notifications/v1/instances/{instanceID}/destinations/{id}/devices/{device_id}` | Manager, Administrator, Device-Manager | Get a single device under a push notifications FCM destination |
+| `event-notifications.devices.list`| `GET /event-notifications/v1/instances/{instanceID}/destinations/{id}/devices` | Manager, Administrator, Device-Manager | Create all devices under a push notifications FCM Destination |
+| `event-notifications.devices.update`| `PUT /event-notifications/v1/instances/{instanceID}/destinations/{id}/devices/{device_id}` | Manager, Administrator, Device-Manager | Update an existing device under a push notifications FCM destination |
+| `event-notifications.devices.delete`| `POST /event-notifications/v1/instances/{instanceID}/destinations/{id}/devices/{device_id}` | Manager, Administrator, Device-Manager | Delete an exisitng device under a push notifications FCM destination |
+| `event-notifications.tag-subscriptions.list`| `GET /event-notifications/v1/instances/{instanceID}/destinations/{id}/tag_subscriptions` | Manager, Administrator | list all subscriptions under a push DCM destination|
+| `event-notifications.tag-subscriptions.devices.list`| `GET /event-notifications/v1/instances/{instanceID}/destinations/{id}/tag_subscriptions/devices/{device_id}` | Manager, Administrator, Device-Manager | Get a single device from tag subscriptions under a push notifications FCM destination |
+| `event-notifications.tag-subscriptions.create`| `POST /event-notifications/v1/instances/{instanceID}/destinations/{id}/tag_subscriptions` | Manager, Administrator, Device-Manager | Create a tag subscription under a push notifications FCM Destination |
+| `event-notifications.tag-subscriptions.delete`| `DELETE /event-notifications/v1/instances/{instanceID}/destinations/{id}/tag_subscriptions` | Manager, Administrator, Device-Manager | Delete tag subscriptions under a push notifications FCM destination |
+| `event-notifications.channel-groups.create`| `POST /event-notifications/v1/instances/{instance_id}/destinations/{id}/fcm_channel_groups` | Manager, Administrator, Device-Manager | Create a new channel group under a push notifications FCM destination |
+| `event-notifications.channel-groups.read`| `POST /event-notifications/v1/instances/{instance_id}/destinations/{id}/fcm_channel_groups/{group_id}` | Manager, Administrator, Device-Manager | Get a new channel group under a push notifications FCM destination |
+| `event-notifications.channel-groups.list`| `GET /event-notifications/v1/instances/{instance_id}/destinations/{id}/fcm_channel_groups` | Manager, Administrator, Device-Manager | List all channel groups under a push notifications FCM destination |
+| `event-notifications.channel-groups.update`| `PUT /event-notifications/v1/instances/{instance_id}/destinations/{id}/fcmChannelGroups/{group_id}` | Manager, Administrator, Device-Manager | Update an exsiting channel group under a push notifications FCM destination |
+| `event-notifications.channel-groups.delete`| `DELETE /event-notifications/v1/instances/{instance_id}/destinations/{id}/fcm_channel_groups/{group_id}` | Manager, Administrator | Delete an exisitng channel group under a push notifications FCM destination |
 {: caption="Table 3. Actions mapped to different roles" caption-side="top"}
 
 ## Working with API keys
+
 {: #apikeys}
 
 Upon creating service credentials, you might notice an `apiKey` is displayed instead of the `appSecret`.
