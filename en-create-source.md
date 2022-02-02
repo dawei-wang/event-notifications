@@ -52,6 +52,7 @@ The supported IBM Cloud Services can be seen under Add--> IBM managed services.
 {: #en-ibm-source-list}
 
 - [IBM Cloud Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=%2Fobserve%2Fmonitoring%2Fcreate)
+- [IBM Cloud Security and Compliance Center](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-security-and-compliance-center-is-now-integrated-with-event-notifications)
 
 ## Add API source
 API sources offers users the ability to use {{site.data.keyword.en_short}} service API's to send notifications.
