@@ -31,4 +31,4 @@ IBM Monitoring and {{site.data.keyword.compliance_long}} are enabled while {{sit
 {: #en-ibm-sources-list}
 
 - [IBM Cloud Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=%2Fobserve%2Fmonitoring%2Fcreate)
-- [IBM Cloud Security and Compliance Center](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-security-and-compliance-center-is-now-integrated-with-event-notifications)
+- [IBM Cloud Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui)
