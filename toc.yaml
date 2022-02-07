@@ -28,7 +28,8 @@ toc:
           - en-destination-sms.md
           - en-destination-push.md
           - en-destination-webhook.md
-        
+         
+
 
   - navgroup:
       id: tutorial
@@ -39,6 +40,7 @@ toc:
       - en-create-subscription.md
       - en-create-source.md
       - en-create-destination-fcm.md
+      - en-send-push.md
 
 
   - navgroup:
@@ -65,7 +67,7 @@ toc:
           links:
           - link:
               label: API Explorer
-              href: https://cloud.ibm.com/apidocs/event-notifications
+              href: https://test.cloud.ibm.com/apidocs/event-notifications
       - topicgroup:
           label: High availability and disaster recovery
           topics:
