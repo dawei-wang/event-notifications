@@ -28,6 +28,8 @@ toc:
           - en-destination-sms.md
           - en-destination-push.md
           - en-destination-webhook.md
+      - topic: en-release-notes.md
+        navtitle: Release notes
          
 
 
