@@ -18,7 +18,6 @@ toc:
       - en-about.md
       - en-concepts.md
       - en-reln-model.md
-      - en-release-notes.md
       - en-source.md
       - en-destination.md
       - topicgroup:
@@ -30,7 +29,6 @@ toc:
           - en-destination-webhook.md
       - topic: en-release-notes.md
         navtitle: Release notes
-         
 
 
   - navgroup:
@@ -41,8 +39,7 @@ toc:
       - en-create-destination.md
       - en-create-subscription.md
       - en-create-source.md
-      - en-create-destination-fcm.md
-      - en-send-push.md
+      - en-create-send-push-fcm.md
 
 
   - navgroup:
@@ -58,6 +55,7 @@ toc:
           topics:
           - en-audit.md
           - en-data-security.md
+          - en-service-credentials.md
 
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
@@ -74,8 +72,6 @@ toc:
           label: High availability and disaster recovery
           topics:
           - en-high-availability.md
-          - en-service-credentials.md
-          - en-responsibilities.md
           - en-regions-endpoints.md
 
 
@@ -83,6 +79,7 @@ toc:
       id: help
       topics:
       - en-getting-support.md
+      - en-responsibilities.md
       - topicgroup:
           label: FAQs
           topics:
