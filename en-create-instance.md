@@ -28,7 +28,7 @@ Take the steps that get you started by creating an {{site.data.keyword.en_short}
 {: #en-log-in}
 {: step}
 
-In the {{site.data.keyword.Bluemix_notm}} [catalog](https://test.cloud.ibm.com/catalog#services), search and select [{{site.data.keyword.en_short}}](https://test.cloud.ibm.com/catalog/services/event-notifications). The service configuration screen opens.
+In the {{site.data.keyword.Bluemix_notm}} [catalog](/catalog#services), search and select [{{site.data.keyword.en_short}}](/catalog/services/event-notifications). The service configuration screen opens.
 
 ## Select a location
 {: #en-select}
