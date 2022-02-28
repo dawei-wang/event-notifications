@@ -28,7 +28,7 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
-## 28 February 2022
+## 28 Feb 2022
 {: #event-notifications-Feb2822}
 {: release-note}
 
@@ -42,7 +42,7 @@ New destination: Apple Push Notification Service (APNs) for iOS
 New source: {{site.data.keyword.secrets-manager_full}}
 :   Integrating {{site.data.keyword.secrets-manager_short}} with Event Notifications can help you route life cycle events for your secrets by using supported channels. For more information, see [Enabling event notifications for Secrets Manager](/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui).
 
-## 31 January 2022
+## 31 Jan 2022
 {: #event-notifications-Jan3122}
 {: release-note}
 
