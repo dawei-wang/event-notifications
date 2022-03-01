@@ -97,7 +97,7 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
    * Flag: `--description DESCRIPTION`   
 * The Certificate file path to be provided.
    * Flag: `--certificate CERTIFICATE`     
-* The Certificate Content type to be set in case of IOS destination. The available options are p8/p12
+* The Certificate Content type to be set in case of iOS destination. The available options are p8/p12
    * Flag: `--certificate-content-type CERTIFICATE-CONTENT-TYPE`    
 * The Configuration needed to set the destination specific parameters.
    * Flag: `--config CONFIG` 
@@ -115,7 +115,7 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
      }
     }
     ```    
-    The following example shows the format of the DestinationConfig object for IOS destination with P8 certificate.
+    The following example shows the format of the DestinationConfig object for iOS destination with P8 certificate.
 
     ```json
     {
@@ -129,7 +129,7 @@ ibmcloud event-notifications destination create --name NAME --type TYPE [--descr
    }
     ```  
 
-   The following example shows the format of the DestinationConfig object for IOS destination with P8 certificate.
+   The following example shows the format of the DestinationConfig object for iOS destination with P8 certificate.
 
    ``` json
    {
@@ -630,7 +630,7 @@ The following example shows the target device configuration example.
 {"fcm_devices": ["deviceidstring"],"user_ids": ["useridstring"], "platform": ["G"]}
 ```
 
-<dd>Additional properties that can be configured for the IOS notification.
+<dd>Additional properties that can be configured for the iOS notification.
 <p>
 <table>
   <caption>Table 1. Settings specific to iOS platform.</caption>
@@ -702,7 +702,7 @@ The following example shows the target device configuration example.
   <tr>
     <td>body</td>
     <td>string</td>
-    <td>The body for IOS notifications.</td>
+    <td>The body for iOS notifications.</td>
   </tr>
   <tr>
     <td>attachment_url</td>
