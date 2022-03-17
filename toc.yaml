@@ -41,7 +41,8 @@ toc:
       - en-create-source.md
       - en-push-fcm.md
       - en-push-apns.md
-
+      - en-terraform-tutorial.md
+      - en-ts-monitor-secrets.md
 
   - navgroup:
       id: howto
@@ -58,7 +59,7 @@ toc:
           - en-data-security.md
           - en-service-credentials.md
 
-#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://cloud.ibm.com/docs/api-docs.
+#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
   - navgroup:
       id: reference
@@ -68,7 +69,7 @@ toc:
           links:
           - link:
               label: API Explorer
-              href: https://cloud.ibm.com/apidocs/event-notifications
+              href: https://test.cloud.ibm.com/apidocs/event-notifications
       - topicgroup:
           label: Event Notifications CLI
           topics:
@@ -78,6 +79,7 @@ toc:
           topics:
           - en-high-availability.md
           - en-regions-endpoints.md
+      - en-notices.md
 
 
   - navgroup:
@@ -85,6 +87,7 @@ toc:
       topics:
       - en-getting-support.md
       - en-responsibilities.md
+     
       - topicgroup:
           label: FAQs
           topics:
