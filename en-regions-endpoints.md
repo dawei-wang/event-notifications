@@ -35,6 +35,7 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 - Dallas
 - London
 - Sydney
+- Frankfurt
 
 You can create {{site.data.keyword.en_full_notm}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions.
 
