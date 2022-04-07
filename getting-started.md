@@ -74,7 +74,7 @@ A destination is a delivery target for a notification. Two destination categorie
 
 Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported:
 
-- [{{site.data.keyword.Bluemix_notm}} email service](docs/event-notifications?topic=event-notifications-en-destinations-email)
+- [{{site.data.keyword.Bluemix_notm}} email service](/docs/event-notifications?topic=event-notifications-en-destinations-email)
 - [{{site.data.keyword.Bluemix_notm}} push notification service](/docs/event-notifications?topic=event-notifications-en-destinations-push)
 - [{{site.data.keyword.Bluemix_notm}} SMS service](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
 

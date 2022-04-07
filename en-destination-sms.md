@@ -66,4 +66,4 @@ In the example, the total SMS units for messages sent to destination numbers in 
 
 You are charged for messages that are successfully sent by the {{site.data.keyword.Bluemix_notm}} SMS service to the local SMS provider regardless of whether the message was successfully delivered to the local device. So vet your phone number list carefully to prevent unnecessary charges.
 
-You can monitor your SMS usage by setting up a monitoring dashboard through the `Actions` menu in the {{site.data.keyword.en_short}} dashboard. See [Monitor Event Notifications service metrics with IBM Cloud Monitoring](docs/event-notifications?topic=event-notifications-en-monitoring) for details.
+You can monitor your SMS usage by setting up a monitoring dashboard through the `Actions` menu in the {{site.data.keyword.en_short}} dashboard. See [Monitor Event Notifications service metrics with IBM Cloud Monitoring](/docs/event-notifications?topic=event-notifications-en-monitoring) for details.
