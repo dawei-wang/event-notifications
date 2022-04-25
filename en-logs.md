@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-10-18"
+  years: 2019, 2022
+lastupdated: "2022-04-21"
 
 keywords: event notifications logDNA , event notifications logging, event notifications external logs
 
@@ -24,103 +24,145 @@ subcollection: event-notifications
 {:preview: .preview}
 
 # Logging for {{site.data.keyword.en_short}}
-{: #en-logging}
+{: #logging}
 
-Logging is automatically enabled in {{site.data.keyword.en_full}} to help you troubleshoot issues. You can also use the {{site.data.keyword.at_full_notm}} service to track how users and applications interact with the {{site.data.keyword.en_short}} service. Finally, you can view logs in {{site.data.keyword.la_full_notm}}.
+You can view and analyze {{site.data.keyword.en_short}} logs by using the {{site.data.keyword.la_full}} service and enabling platform logs in each region where you operate in {{site.data.keyword.cloud_notm}}. {{site.data.keyword.la_full_notm}} adds log management capabilities to your {{site.data.keyword.cloud}} architecture. 
 {: shortdesc}
 
+Use the [{{site.data.keyword.at_full_notm}} service](/docs/activity-tracker) to audit and track how users and applications interact with the {{site.data.keyword.en_short}} service. 
+{: tip}
 
-## Enabling platform logs from the Logging dashboard
-{: #en-logs}
 
-To configure a logging instance from the Observability dashboard in the {{site.data.keyword.cloud_notm}}, complete the following steps:
+## Platform logs
+{: #logging_ov}
 
-1. [Log in to your {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/login){: external}.
+Platform logs are logs that are exposed by logging-enabled services and the platform in {{site.data.keyword.cloud_notm}}. 
 
-	After you log in, the {{site.data.keyword.cloud_notm}} UI opens.
+- Platform logs are regional. 
 
-2. Go to the menu icon ![menu icon](../../icons/icon_hamburger.svg) &gt; **Observability** to access the *Observability* dashboard.
+    You can monitor logs from enabled services on the {{site.data.keyword.cloud_notm}} in the region where the service is available. 
 
-3. Click **Logging**, then click **Options** > **Edit Platform**.
+- You can configure 1 instance only of the {{site.data.keyword.la_short}} service per region to collect platform logs in that location. 
 
-4. Select a [region](/docs/log-analysis?topic=log-analysis-regions).
+    You can have multiple {{site.data.keyword.la_short}} instances in a location. However, only 1 instance in a location (region) can be configured to receive logs from [enabled services](/docs/log-analysis?topic=log-analysis-cloud_services) in that {{site.data.keyword.cloud_notm}} location.
 
-5. Choose which logging instance receives logs from enabled services on that location. [Learn more about the services that are enabled to send logs to {{site.data.keyword.la_full_notm}}.](/docs/log-analysis?topic=log-analysis-cloud_services)
+- To configure a {{site.data.keyword.la_short}} instance, you must set on the `platform logs` configuration setting. Also, you must have the platform role `editor` or higher for the {{site.data.keyword.la_short}} service in your account.
 
-6. Click **Select**.
+    To enable platform logs, see:
 
-The main *Observability* page opens.
+    - [Configuring platform logs through the Observability dashboard](/docs/log-analysis?topic=log-analysis-config_svc_logs#config_svc_logs_ui)
+
+    - [Configuring platform logs from the command line](/docs/log-analysis?topic=log-analysis-config_svc_logs#platform_logs_enabling_cli)
+
+
+For more information about platform logs, see [Configuring IBM Cloud platform logs](/docs/log-analysis?topic=log-analysis-config_svc_logs).
+
+## Locations
+{: #logging_locations}
+
+The following table outlines the locations where you can view and analyze {{site.data.keyword.en_short}} logs:
+
+| Locations in Americas | Platform logs available |
+|-----------------------|---------------------------------|
+| `Dallas (us-south)`   | ![Checkmark icon](../icons/checkmark-icon.svg "checkmark") |
+{: caption="Table 1. The automatic collection of {{site.data.keyword.registryshort_notm}} service metrics in Americas locations" caption-side="bottom"}
+
+| Locations in Asia Pacific | Platform logs available |
+|---------------------------|---------------------------------|
+| `Sydney (au-syd)`         | ![Checkmark icon](../icons/checkmark-icon.svg "checkmark") |
+{: caption="Table 2. The automatic collection of {{site.data.keyword.registryshort_notm}} service metrics in Asia Pacific locations" caption-side="bottom"}
+
+| Locations in Europe | Platform logs available |
+|---------------------|---------------------------------|
+| `Frankfurt (eu-de)` | ![Checkmark icon](../icons/checkmark-icon.svg "checkmark") |
+| `London (eu-gb)`    | ![Checkmark icon](../icons/checkmark-icon.svg "checkmark") |
+{: caption="Table 3. The automatic collection of {{site.data.keyword.registryshort_notm}} service metrics in Europe locations" caption-side="bottom"}
+
 
 ## Viewing logs
-{: #en-logs-view}
+{: #logging_view}
 
-To enable an instance that is receiving {{site.data.keyword.en_short}} action logs, you need to configure the Platform Service Logs in the logging service.
-{{site.data.keyword.en_short}} sends the action logs to the Log Analysis service in the same region as the {{site.data.keyword.en_short}} namespace. Actions logs of a {{site.data.keyword.en_short}} namespace in `us-south` are sent to a logging instance in `us-south`.
+If a {{site.data.keyword.la_short}} instance in a region is already enabled to collect platform logs, logs from the {{site.data.keyword.en_short}} service in that region are collected automatically and available for analysis through this instance.
+
+To view and analyze platform logs for an {{site.data.keyword.en_short}} instance, check that the {{site.data.keyword.la_short}} instance is provisioned in the same region where the {{site.data.keyword.en_short}} instance that you want to monitor is available.
+{: note}
+
+To launch the {{site.data.keyword.la_short}} web UI to view logs, see [Navigating to the web UI](/docs/log-analysis?topic=log-analysis-launch).
+
+## Fields per log type
+{: #logging_fields}
+
+Table 4 outlines the fields that are included in each log record:
+
+| Field             | Type       | Description             |
+|-------------------|------------|-------------------------|
+| `logSourceCRN`    | Required   | Defines the account where the log is published. |
+| `saveServiceCopy` | Required   | Defines whether IBM saves a copy of the record for operational purposes. |
+| `resourceGroupId` | Required   | Defines the resource group that is associated with the {{site.data.keyword.en_short}} instance. |
+| `message`         | Required   | Description of the log that is generated. 
+| `msg_timestamp`   | Required   | UTC timestamp of the message.
+| `messageID`       | Required   | ID of the log that is generated. |
+| `resolution`      | Optional   | Guidance on how to proceed if you receive this log record. |
+| `documentsURL`    | Optional   | More information on how to proceed if you receive this log record. |
+| `sourceID`        | Required   | CRN of the {{site.data.keyword.cloud_notm}} service that sends the notification through the {{site.data.keyword.en_short} service. |
+| `notificationID`  | Optional   | ID of the notification that is sent to a destination. |
+| `level`           | Required   | Type of log. Valid values are `INFO`, `WARN`, `ERROR` | 
+{: caption="Table 4. Log record fields" caption-side="top"}
 
 
-## Pre-defined fields per log type
-{: #en-logs-fields}
+## Log messages
+{: #logging_msgs}
 
-Each log record has:
-- LogSourceCRN: CRN of the customer's instance
-- saveServiceCopy: whether IBM's instance has access to it
-- messageID
-- message
-- resolution
-- documentURL
+The following table list the message IDs that are generated by the {{site.data.keyword.en_short}} service:
+
+| Message ID | Log type    | Description |
+|------------|-------------|-------------|
+| `event-notifications.00001I` | `INFO` | `A notification event from source <sourceID> has been received.` CRN is used for IBM Cloud services. SourceID can be an IBM Cloud service or a human, for example|
+| `event-notifications.00002I` | `INFO` | `The notification ID <NOTIFICATION-ID> has been assigned to the event that is originated from source <sourceID>.` |
+| `event-notifications.00003I` | `INFO` | `A notification event with ID <NOTIFICATION-ID> is published through the following topic IDs: [<LIST-OF-TOPIC-IDS>]` |
+| `event-notifications.00004I` | `INFO` | `A notification request with ID <NOTIFICATION-ID> is processed by the following subscribers: [<LIST-OF-SUBSCRIPTIONS>]` |
+| `event-notifications.00006I` | `INFO` | `No devices found for platform: push_chrome` List of valid platforms is: [push_chrome, push_firefox, push_android,push_ios] |
+| `event-notifications.00007I` | `INFO` | `An SMS is dispatched to the following numbers: [<LIST-OF-TELEPHONE-NUMBERS].` |
+| `event-notifications.00008I` | `INFO` | `An email is sent to each of the following destinataries: [<LIST-OF-EMAIL-ADDRESSES>]` |
+| `event-notifications.00009I` | `INFO` | `A webhook is successfully served. Response from the webhook: OK with the status code: 200` |
+| `event-notifications.00010I` | `INFO` | `A notification event with ID <NOTIFICATION_ID is sent to the following subscriptions.<LIST-OF_SUBSCRIPTIONS>` 
+| `event-notifications.00011I` | `INFO` | `A notification event with ID <NOTIFICATION_ID is sent to the following destinations.<LIST-OF_DESTINATIONS>` 
+| `event-notifications.00012I` | `INFO` | `Notification processed successfully for total: 1 devices and platform push_chrome` 
+| `event-notifications.00013I` | `INFO` | `Notification dispatched successfully to total devices <COUNT> and platform push_android`. 
+| `event-notifications.00001W` | `WARN` | `A notification event from source<Source_ID> is rejected because no topic is configured for the source. . The topic to filter the event is missing.` |
+| `event-notifications.00002W` | `WARN` | `A notification event from the source <Source_ID> is invalid as it is not filtered by any topic.` |
+| `event-notifications.00003W` | `WARN` | `A notification request with ID <NOTIFICATION-ID>, that is processed by the following subscribers: [<LIST-OF-SUBSCRIPTIONS>], is forbidden for the destination type: smtp_ibm/sms` |
+| `event-notifications.00004W` | `WARN` | ` A notification with ID <NOTIFICATION_ID> is not dispatched as it has no subscribers.`|
+| `event-notifications.00005W` | `WARN` | ` Webhook returned with an error response: Not Found with the status code: 404`|
+| `event-notifications.00001E` | `ERROR` | `Notifications failed to dispatch to the following invalid devices [<DEVICE_IDS>] and platform push_android.` |
+| `event-notifications.00002E` | `ERROR` | `Webhook returned with an error response:<Error response> Unauthorised with the status code:401`|
+{: caption="Table 5. Message IDs" caption-side="top"}
 
 
-| Log sample    |  SourceId  | Description|
-|---------------|------------|-------------|
-| An event was received from the source <Source_ID> to be filtered by the topics for possible ingestion| <Source_ID>| Indicates that a notification was triggered| 
-{: caption="Table 1. Types of logs" caption-side="top"}
-{: #en-logs-table-1}
-{: tab-title="Incoming notifications"}
-{: tab-group="External Logs"}
-{: class="simple-tab-table"}
-{: row-headers}
+## Analyzing logs
+{: #logging_analyze}
 
-| Log sample    |  SourceId | NotificationId | Description|
-|---------------|-----------|----------------|-------------|
-|An event from the source <source_id> was ingested by the filter and is assigned a unique notification_id <notificaiton_id> to be dispatched to the destinations.| <Source_ID>| <Notificaiton_id>| Incoming notification is ingested into the system after evaluation|
-{: caption="Table 1. Types of logs " caption-side="top"}
-{: #en-logs-table-2}
-{: tab-title="Ingested notifications"}
-{: tab-group="External Logs"}
-{: class="simple-tab-table"}
-{: row-headers}
 
-| Log sample  | SourceId | NotificationId | Verbatim |
-|-------------|----------|----------------|--------------|
-|New email notification status| <Source_CRN_HERE> | <NOTIFICATION_ID>| Total five emails were sent |
-{: caption="Table 1. Types of logs " caption-side="top"}
-{: #en-logs-table-2}
-{: tab-title="Email notifications"}
-{: tab-group="External Logs"}
-{: class="simple-tab-table"}
-{: row-headers}
+### List logs generated by a service
+{: #logging_analyze_1}
 
-| Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Help docs|
-|--------------|----------|----------------|--------------|---------------|------------|
-|SMS notification status| <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent SMS to 8 out of 10 phone numbers. Each message was segmented into three parts| N/A  |  N/A |
-| SMS failed status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Failed to deliver to the following phone numbers: +91946******, +91976*****| Verify that the phone numbers that are provided in the subscription are valid and from supported countries |  tbd   |
-{: caption="Table 1. Types of logs " caption-side="top"}
-{: #en-logs-table-2}
-{: tab-title="SMS notifications"}
-{: tab-group="External Logs"}
-{: class="simple-tab-table"}
-{: row-headers}
+If you want to view all the logs thar are being generated for a particular source, get the `sourceID` from the {{site.data.keyword.en_short}} service dashboard and use the following query in {{site.data.keyword.la_short}}:
+ 
+```sh
+sourceID:<source_crn>
+```
+{: codeblock}
 
-| Log sample   | SourceId | NotificationId |  Verbatim| Resolution | Help docs|
-|--------------|----------|----------------|----------|------------| ------- |
-|Webhook notification status (warning)| <Source_CRN_HERE> | <NOTIFICATION_ID>|Failed to send notification to webhook with status code: 400 and response: 400 Bad Request https://webhook.site/dba0967b-0115-45d0-845c-e226bdf19555 | Check the configured URL for the webhook and the headers provided|  tbd |
-|Webhook notification status | <Source_CRN_HERE> | <NOTIFICATION_ID>| Successfully sent notification to the webhook | N/A |  N/A  |
-{: caption="Table 1. Types of logs " caption-side="top"}
-{: #en-logs-table-2}
-{: tab-title="Webhook notifications"}
-{: tab-group="External Logs"}
-{: class="simple-tab-table"}
-{: row-headers}
 
+### List logs for a notification request
+{: #logging_analyze_2}
+
+
+If you know the notification ID that is generated for a request from a service or source to the {{site.data.keyword.en_short}} service, you can use the following query in {{site.data.keyword.la_short}} to list all logs for that particular notification ID.
+
+```sh
+notificationID:<notification Id>
+```
+{: codeblock}
 
 
