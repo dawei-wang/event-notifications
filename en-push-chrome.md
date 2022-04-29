@@ -39,7 +39,6 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Chr
 {: shortdesc}
 
 ## What is {{site.data.keyword.en_short}}?
-
 {: #en-what-is}
 
 {{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications, and webhooks.
