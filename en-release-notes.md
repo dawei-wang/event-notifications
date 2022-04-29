@@ -33,7 +33,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 New destinations: Web Push Notifications for Chrome and Firefox
-:   Push Notifications to Chrome is now available as a destination. Send push notifications from your application to Chrome. For more information, see [Create and send push notifications to Chrome web using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-create-and-send-push-notifications-to-chrome-web-using-ibm-cloud-event-notifications).
+:   Push Notifications to Chrome is now available as a destination. Send push notifications from your application to Chrome. For more information, see [Create and send push notifications to Chrome web using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-push-chrome).
 :   Push Notifications to Firefox is now available as a destination. Send push notifications from your application to Firefox. For more information, see [Create and send push notifications to Firefox web using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-push-firefox).
 
 ## 25 Mar 2022
