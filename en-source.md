@@ -42,5 +42,5 @@ The list of IBM provided sources is as follows:
 
 You can send custom events from your backend application to the {{site.data.keyword.en_short}} service using API sources. To do this, you need to add an `API source` first.
 
-To add an IBM managed source or an API source, complete the steps provided in the [Add an Event Notifications source tutorial](docs/event-notifications?topic=event-notifications-en-add-source)
+To add an IBM managed source or an API source, complete the steps provided in the [Add an Event Notifications source tutorial](/event-notifications?topic=event-notifications-en-add-source)
 
