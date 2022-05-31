@@ -56,7 +56,11 @@ Based on your business requirements, decide on a pricing plan. Currently, the fo
 {: #en-decide-event-source}
 {: step}
 
-An IBM managed source indicates a service on {{site.data.keyword.Bluemix_notm}} that can emit events to {{site.data.keyword.en_short}} service.
+You can create either an `API Source` or an `IBM Managed source`.
+
+An `API source` indicates that the Event originated outside of the IBM Cloud and is sent to {{site.data.keyword.en_short}} service through API calls.
+
+An `IBM managed source` indicates a service on {{site.data.keyword.Bluemix_notm}} that can emit events to {{site.data.keyword.en_short}} service.
 
 The list of IBM provided sources is as follows:
 - [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-notifications)
@@ -74,7 +78,7 @@ A destination is a delivery target for a notification. Two destination categorie
 
 Human destinations are devices, servers, or applications that present notifications for human consumption. The following human destinations are supported:
 
-- [{{site.data.keyword.Bluemix_notm}} email service](/docs/event-notifications?topic=event-notifications-en-destinations-email)
+- [{{site.data.keyword.Bluemix_notm}} email service](docs/event-notifications?topic=event-notifications-en-destinations-email)
 - [{{site.data.keyword.Bluemix_notm}} push notification service](/docs/event-notifications?topic=event-notifications-en-destinations-push)
 - [{{site.data.keyword.Bluemix_notm}} SMS service](/docs/event-notifications?topic=event-notifications-en-destinations-sms)
 
