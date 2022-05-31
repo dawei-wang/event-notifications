@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-05-31"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -28,8 +28,16 @@ content-type: release-note
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
 
+## 31 May 2022
+{: #event-notifications-May2022}
+{: release-note}
+
+New destination: Slack
+:  Slack is now available as a destination. You can send notifications to your lack channels using Event Notifications. [Send notifications to your slack channels using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-destination-slack).
+
+
 ## 29 Apr 2022
-{: #event-notifications-Apr2922}
+{: #event-notifications-Apr2022}
 {: release-note}
 
 New destinations: Web Push Notifications for Chrome and Firefox
