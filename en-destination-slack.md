@@ -22,7 +22,7 @@ subcollection: event-notifications
 
 
 # Slack
-{: #en-destination-slack}
+{: #en-destinations-slack}
 
 A slack represents a service destination, where an incoming notification can be consumed programmatically. For example, an incoming notification about an event can trigger a slack notification based on the content of the incoming notification.
 {: shortdesc}
