@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-05-31"
 
 keywords: event notifications, event-notifications, tutorials
 
@@ -27,6 +27,7 @@ Create an {{site.data.keyword.en_short}} destination. Destinations are custom pr
 - IBM Cloud push notification service
 - IBM Cloud SMS
 - Webhook
+- Slack
 {: shortdesc}
 
 email-ibm and email-sms are supported out of the box.
