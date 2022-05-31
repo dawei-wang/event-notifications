@@ -33,7 +33,7 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: release-note}
 
 New destination: Slack
-:  Slack is now available as a destination. You can send notifications to your lack channels using Event Notifications. [Send notifications to your slack channels using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-destination-slack).
+:  Slack is now available as a destination. You can send notifications to your lack channels using Event Notifications. [Send notifications to your slack channels using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
 
 
 ## 29 Apr 2022
