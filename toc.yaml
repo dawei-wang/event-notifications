@@ -27,7 +27,6 @@ toc:
           - en-destination-sms.md
           - en-destination-push.md
           - en-destination-webhook.md
-          - en-destination-slack.md
       - topic: en-release-notes.md
         navtitle: Release notes
 
@@ -44,6 +43,7 @@ toc:
       - en-push-apns.md
       - en-push-chrome.md
       - en-push-firefox.md
+      - en-push-safari.md
       - en-terraform-tutorial.md
       - en-ts-monitor-secrets.md
 
@@ -73,7 +73,7 @@ toc:
           links:
           - link:
               label: API Explorer
-              href: https://{DomainName}/apidocs/event-notifications
+              href: /apidocs/event-notifications
       - topicgroup:
           label: Event Notifications CLI
           topics:
@@ -92,6 +92,7 @@ toc:
       - en-getting-support.md
       - en-responsibilities.md
       - en-migration.md
+      - en-payload.md
       - topicgroup:
           label: FAQs
           topics:
