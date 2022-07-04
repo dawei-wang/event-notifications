@@ -2,7 +2,7 @@
 
 copyright:
   years:  2017, 2022
-lastupdated: "2022-04-22"
+lastupdated: "2022-07-05"
 
 keywords: event notifications, event notification, notifications, service access, manage, user roles
 
@@ -19,7 +19,7 @@ With {{site.data.keyword.en_short}} and {{site.data.keyword.iamlong}}, {{site.da
 
 As an account owner, you can set policies within your account to create different levels of access for different users. For example, certain users can have `Read only` access to one instance, but `Write` access to another. You can decide who is allowed to create, update, and delete instances of {{site.data.keyword.en_short}}.
 
-{{site.data.keyword.en_short}} service has adopted IAM so App secret is not generated for new instances. Instead, you must use the [API keys instead](https://cloud.ibm.com/docs/account?topic=account-manapikey).
+{{site.data.keyword.en_short}} service has adopted IAM so App secret is not generated for new instances. Instead, you must use the [API keys instead](https://{DomainName}/docs/account?topic=account-manapikey).
 {: note}
 
 ## User roles
@@ -55,7 +55,7 @@ The following table details actions that are mapped to service access roles. Ser
 | Service Configuration Reader| Read services configuration for Governance management | View services configurations |
 | Event Source Manager | Source integration with {{site.data.keyword.en_short}} by using service to service authorization | * Perform service to service registration, of source \n * View, edit, and delete sources and events \n * Send notifications |
 | {{site.data.keyword.en_short}} Publisher | Create notification and view notifications count | Send notifications and view notifications count |
-| Device Manager | Custom role to handle push device registration with the {{site.data.keyword.en_short}} service | * View, create, edit, and delete Push Devices by using {{site.data.keyword.en_short}} client SDKs. \n *View, create, and delete Tags for Push Devices by using [{{site.data.keyword.en_short}} API](https://test.cloud.ibm.com/apidocs/event-notifications/). \n * View, Create, and Delete Channel Groups for Push Devices by using [{{site.data.keyword.en_short}} API](https://test.cloud.ibm.com/apidocs/event-notifications/). \n * View, create and delete Channels for Push Devices by using [{{site.data.keyword.en_short}} APIs](https://test.cloud.ibm.com/apidocs/event-notifications/).|
+| Device Manager | Custom role to handle push device registration with the {{site.data.keyword.en_short}} service | * View, create, edit, and delete Push Devices by using {{site.data.keyword.en_short}} client SDKs. \n *View, create, and delete Tags for Push Devices by using [{{site.data.keyword.en_short}} API](https://{DomainName}/apidocs/event-notifications/). \n * View, Create, and Delete Channel Groups for Push Devices by using [{{site.data.keyword.en_short}} API](https://{DomainName}/apidocs/event-notifications/). \n * View, create and delete Channels for Push Devices by using [{{site.data.keyword.en_short}} APIs](https://{DomainName}/apidocs/event-notifications/).|
 {: caption="Table 2. Actions mapping to service access roles" caption-side="top"}
 
 For more information about assigning user roles in the UI, see [Managing IAM access](/docs/account?topic=account-assign-access-resources).
@@ -66,7 +66,7 @@ For more information about assigning user roles in the UI, see [Managing IAM acc
 Every user who accesses the {{site.data.keyword.en_short}} service in your account must be assigned an access policy with an IAM user role defined. That policy determines what actions the user can perform within the context of the service or instance you select.
 {: shortdesc}
 
-The actions are customized and defined by the {{site.data.keyword.Bluemix_notm}} service as operations that are permitted in the service. The actions are then mapped to IAM user roles. Some of the actions taken you can track with the {{site.data.keyword.cloudaccesstrailshort}} service. In the following table, the actions and required permissions for {{site.data.keyword.en_short}} are mapped.
+The actions are customized and defined by the {{site.data.keyword.cloud_notm}} service as operations that are permitted in the service. The actions are then mapped to IAM user roles. Some of the actions taken you can track with the {{site.data.keyword.cloudaccesstrailshort}} service. In the following table, the actions and required permissions for {{site.data.keyword.en_short}} are mapped.
 
 | Service action | Display name| Role| Description|
 |----------------|-------------|------------------|-----------------|
@@ -171,4 +171,4 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
  }' 'https://us-east.imfpush.cloud.ibm.com/imfpush/v1/apps/4809d407-85ff-4d11-ae4b-0fcdf8a833f1/messages'
 ```
 
-For more information about IAM, see [IAM Access](https://cloud.ibm.com/docs/account?topic=account-userroles).
+For more information about IAM, see [IAM Access](https://{DomainName}/docs/account?topic=account-userroles).

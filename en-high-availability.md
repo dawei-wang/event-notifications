@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-07-05"
 
 keywords: HA for Event Notifications, high availability for Event Notifications, Event Notifications
 
@@ -20,14 +20,12 @@ subcollection: event-notifications
 {:download: .download}
 {:term: .term}
 
-
 # High availability and disaster recovery for {{site.data.keyword.en_short}}
 {: #en-ha}
 
-
 {{site.data.keyword.en_short}} service is a highly available, regional service that runs in multiple zones.
 
-In each supported multizone region, every zone has its own {{site.data.keyword.Bluemix_notm}} Kubernetes service cluster with several worker nodes. Each worker node runs several instances of {{site.data.keyword.en_short}} service components. Each region is fronted by a global load balancer and a web application firewall.
+In each supported multizone region, every zone has its own {{site.data.keyword.cloud_notm}} Kubernetes service cluster with several worker nodes. Each worker node runs several instances of {{site.data.keyword.en_short}} service components. Each region is fronted by a global load balancer and a web application firewall.
 {: shortdesc}
 
 {{site.data.keyword.en_short}} service persists tenant data in a highly available database. A single regional database stores data of all the {{site.data.keyword.en_short}} tenants in that particular region. The data is stored across multiple zones in each region. Data that is stored in the {{site.data.keyword.en_short}} service is encrypted and persisted in a database cluster that is spread across availability zones. All databases connections use TLS/SSL encryption for data in transit.
@@ -50,7 +48,6 @@ Some API examples are as follows:
 {: caption="Table 1. Example API endpoints" caption-side="top"}
 
 For each data set that you need to back up and restore, use `GET` calls to get a copy of the data. And use the corresponding `PUT / POST API` to populate the new instance on a different region.
-
 
 ## Locations
 {: #en-ha-locations}

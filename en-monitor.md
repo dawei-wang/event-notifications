@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-07-05"
 
 keywords: event-notification, event notification, high availability, ha, monitoring, metrics, monitor apps
 
@@ -101,16 +101,13 @@ subcollection: event-notifications
 # Monitor {{site.data.keyword.en_short}} service metrics with {{site.data.keyword.mon_full_notm}}
 {: #en-monitoring}
 
-<!-- All IBM Cloud® general availability (GA) services have a Service Level Agreement of 99.99% availability.  -->
-
 Use {{site.data.keyword.mon_full_notm}} to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams, and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
 {: shortdesc}
 
 ## Set up your {{site.data.keyword.mon_full_notm}} service instance
 {: #en-setup-monitor}
 
-To get started, you need to [provision {{site.data.keyword.Bluemix_notm}} Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=/observe/monitoring/create) instance on your {{site.data.keyword.IBM}} account. See [Provisioning an instance](https://cloud.ibm.com/docs/monitoring?topic=monitoring-provision) for more details.
-
+To get started, you need to [provision {{site.data.keyword.cloud_notm}} Monitoring](https://cloud.ibm.com/catalog/services/ibm-cloud-monitoring?callback=/observe/monitoring/create) instance on your {{site.data.keyword.IBM}} account. See [Provisioning an instance](https://cloud.ibm.com/docs/monitoring?topic=monitoring-provision) for more details.
 
 Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{site.data.keyword.en_short}} service deployments in the following regions:
 
@@ -123,24 +120,23 @@ Currently, {{site.data.keyword.mon_full_notm}} integration is available for {{si
 {: caption="Table 1. Deployment regions" caption-side="top"}
 
 Before you can start with {{site.data.keyword.en_short}} monitoring metrics, you must first opt in and [enable platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_enabling)
-{: note .note}
+{: note}
 
 You can configure only one instance of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics.
 
 - To configure the {{site.data.keyword.mon_full_notm}} instance, you must turn on the platform metrics configuration setting.
 - If a monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see {{site.data.keyword.Bluemix}} services.
 
-To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.Bluemix_notm}} instance is provisioned.
-{:note: .note}
-
+To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.cloud_notm}} instance is provisioned.
+{: note}
 
 ## Access your {{site.data.keyword.mon_full_notm}} metrics
 {: #en-access-monitor}
 
 1. Launch the [{{site.data.keyword.mon_full_notm}} web UI](https://cloud.ibm.com/docs/monitoring?topic=monitoring-launch) from the `Observability` page.
-2. Click `DASHBOARDS`.
-3. In the `Default Dashboards` section, expand `IBM`.
-4. Choose the `{{site.data.keyword.en_short}}` dashboard from the list.
+1. Click `DASHBOARDS`.
+1. In the `Default Dashboards` section, expand `IBM`.
+1. Choose the `{{site.data.keyword.en_short}}` dashboard from the list.
 
 Access your deployment's monitoring dashboard from {{site.data.keyword.mon_full_notm}}, it's in the sidebar, under `IBM`.
 Next, change the scope or make a copy of the default dashboard to monitor an {{site.data.keyword.en_short}} service instance.
@@ -168,7 +164,6 @@ Total number of notifications that are ingested. Ingested notifications are even
 | `Value Type` | `none`|
 | `Segment By` | `ibm_scope`, `ibm_ctype`, `ibm_location`,  `ibm_service_name`, `ibm_service_instance`, `ibm_eventnotifications_source`  |
 {: caption="Table 3. Ingestion metadata" caption-side="top"}
-
 
 ### ibm_eventnotifications_total
 {: #ibm_eventnotifications_total}

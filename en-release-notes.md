@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-06-29"
+  years: 2021, 2022
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -21,7 +21,6 @@ content-type: release-note
 {:tip: .tip}
 {:release-note: data-hd-content-type='release-note'}
 
-
 # Release notes for {{site.data.keyword.en_short}}
 {: #release-notes}
 
@@ -34,7 +33,6 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 
 New destination: Microsoft Teams
 :  Microsoft Teams is now available as a destination. You can send notifications to your Microsoft Teams using Event Notifications. [Send notifications to your Teams using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-destinations-msteams).
-
 
 ## 31 May 2022
 {: #event-notifications-May2022}
@@ -92,4 +90,3 @@ New source: {{site.data.keyword.compliance_full}}
 
 Introducing Event Notifications
 :   Event Notifications is Generally Available. IBM Cloud Monitoring as a source is supported to route events to communication channels like email, SMS and webhooks. 
-
