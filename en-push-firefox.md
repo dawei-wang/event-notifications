@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-05"
+lastupdated: "2022-07-05"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -38,19 +38,19 @@ Create an {{site.data.keyword.en_short}} service, add a push destination for Fir
 {: shortdesc}
 
 ## What is {{site.data.keyword.en_short}}?
-{: #en-what-is}
+{: #en-what-is-ff}
 
-{{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.Bluemix_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.Bluemix_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications, and webhooks.
+{{site.data.keyword.en_short}} is an event notification routing service that notifies you of critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like {{site.data.keyword.prf_hubshort}}, to email, SMS, push notifications, and webhooks.
 
 ## How do clients use Firefox Web Push Notifications?
-{: #en-how-clients-send}
+{: #en-how-clients-send-ff}
 
 The following diagram shows you how clients use Firefox web Push Notifications.
 
 ![How clients use push notifications](images/en-how-send-mozilla.svg "How clients use push notifications"){: caption="Figure 1. How clients use push notifications" caption-side="bottom"}
 
 ## Objectives
-{: #en-objectives}
+{: #en-objectives-ff}
 
 This tutorial shows you how to send push notifications as follows:
 
@@ -60,18 +60,18 @@ This tutorial shows you how to send push notifications as follows:
 * Configure and send Firefox web Push Notifications to a browser.
 
 ## Create an {{site.data.keyword.en_short}} service instance
-{: #en-create-event}
+{: #en-create-event-ff}
 {: step}
 
-* Log in to your [{{site.data.keyword.Bluemix_notm}} account](https://cloud.ibm.com/).
-* In the [{{site.data.keyword.Bluemix_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
+* Log in to your [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/).
+* In the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog#services), search `Event Notifications > Event Notifications`.
 * Select a `Region` from the list of supported regions and select a `pricing plan`.
 * Provide a `Service name`.
 * Select a `resource group`.
 * Click `Create`.
 
 ## Add a generic API source
-{: #en-add-gen-api}
+{: #en-add-gen-api-ff}
 {: step}
 
 Take the following steps:
@@ -81,7 +81,7 @@ Take the following steps:
 * Type a name and an optional description and click `Add`.
 
 ## Create an {{site.data.keyword.en_short}} destination
-{: #en-create-dest}
+{: #en-create-dest-ff}
 {: step}
 
 Click `Destinations` in the {{site.data.keyword.en_short}} console and add the following destination details:
@@ -97,7 +97,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
 ![Destination](images/en-push-firefox-destination.png "Destination"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
 
 ## Create an {{site.data.keyword.en_short}} topic
-{: #en-create-topic}
+{: #en-create-topic-ff}
 {: step}
 
 Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`. Enter the following topic details:
@@ -110,7 +110,7 @@ Select `Topics` in the {{site.data.keyword.en_short}} console and click `Create`
 * `Advanced conditions`: write your own custom conditions, which must follow [jsonpath specifications](https://jsonpath.com/).
 
 ## Create an {{site.data.keyword.en_short}} subscription
-{: #en-create-sub}
+{: #en-create-sub-ff}
 {: step}
 
 Click `Subscriptions` in the {{site.data.keyword.en_short}} console. Enter the following subscription details:
@@ -133,34 +133,34 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
 
 * Edit the manifest_Website.json file.
 
-  ```js
+   ```js
    {
-     "name": "YOUR_WEBSITE_NAME"
-    }
+      "name": "YOUR_WEBSITE_NAME"
+   }
    ```
 
 * Change the `manifest_Website.json` file name to `manifest.json`.
 
 * Include the manifest.json in the `<head>` tag of your html file.
 
-```html
-    <link rel="manifest" href="manifest.json">
-```
+   ```html
+  <link rel="manifest" href="manifest.json">
+   ```
 
 * Include IBM Cloud web push SDK to the script.
 
-```html
+   ```html
    <script src="ENPushSDK.js" async></script>
-```
+   ```
 
 * Complete the following steps to enable the website to initialize the SDK
 
-```js
-  var enPush = new ENPush()
+   ```js
+   var enPush = new ENPush()
 
-  function callback(response) {
-    alert(response.response)
-  }
+   function callback(response) {
+     alert(response.response)
+   }
 
   var initParams = {
     "instanceGUID": "<instance_guid>",
@@ -169,50 +169,49 @@ The Firefox web SDK enables Firefox websites to receive push notifications. Comp
     "deviceId": "<YOUR_DEVICE_ID>",
     "firefoxDestinationId": "<firefox_destination_id>",
     "firefoxApplicationServerKey": "<Firefox_VapId_public_key>"
-  }
+   }
 
-  enPush.initialize(initParams, callback)
-```
+   enPush.initialize(initParams, callback)
+   ```
 
-    * region: Region of the {{site.data.keyword.en_short}} instance. eg; `us-south`,`eu-gb`, `au-syd` and `eu-de`
+   * region: Region of the {{site.data.keyword.en_short}} instance. eg; `us-south`,`eu-gb`, `au-syd` and `eu-de`
 
-    * deviceId: Optional deviceId for device registration.
+   * deviceId: Optional deviceId for device registration.
 
 * To register for notifications, se the `register()` or `registerWithUserId()` API to register the device with IBM Cloud Event Notifications service. Choose either of the following options:
 
-    * Register without `UserId`:
+   * Register without `UserId`:
 
-```js
-    enPush.register(function(response) {
-      alert(response.response)
-    })
-```
+      ```js
+       enPush.register(function(response) {
+         alert(response.response)
+      })
+      ```
 
-    * Register with UserId. For `userId` based notification, the register method will accept one more parameter - `userId`
+   * Register with UserId. For `userId` based notification, the register method will accept one more parameter - `userId`
 
-```js
-    bmsPush.registerWithUserId("UserId",function(response) {
-      alert(response.response)
-    })
-```
+      ```js
+      bmsPush.registerWithUserId("UserId",function(response) {
+         alert(response.response)
+      })
+      ```
 
-`UserId` is the user identifier value with which you want to register devices in the push service instance.
+      `UserId` is the user identifier value with which you want to register devices in the push service instance.
 
 * The `subscribe` API subscribes the device for a tag. After the device is subscribed to a particular tag, the device can receive notifications that are sent for that tag. Add the following code snippet to your web application to subscribe to a list of tags.
 
-```js
-    enPush.subscribe(tagName, function(response) {
+   ```js
+   enPush.subscribe(tagName, function(response) {
       alert(response.response)
     })
-```
+   ```
 
 * When the setup is complete, run your application and register for push notifications.
 
 ## Send notifications to the Firefox device
-{: #en-send-notifications}
+{: #en-send-notifications-ff}
 {: step}
 
 Use the [Send Notification API](https://cloud.ibm.com/apidocs/event-notifications/event-notifications#send-notifications) to send the push notification for the Firefox device. You can use the [Node](https://github.com/IBM/event-notifications-node-admin-sdk#send-notifications) or [Go](https://github.com/IBM/event-notifications-go-admin-sdk#send-notifications) admin SDK instead of calling the API directly.
-
 
 ![Receive notifications](images/en-receive-push-firefox.png "Receive notifications"){: caption="Figure 7. Receive notifications" caption-side="bottom"}
