@@ -81,7 +81,7 @@ toc:
           topics:
           - link:
               label: Event Notifications CLI
-              href: https://{DomainName}}/docs/event-notifications-cli-plugin/event-notifications-cli-plugin-event-notifications-cli
+              href: https://{DomainName}/docs/event-notifications-cli-plugin/event-notifications-cli-plugin-event-notifications-cli
           - en-cli.md
       - topicgroup:
           label: High availability and disaster recovery
