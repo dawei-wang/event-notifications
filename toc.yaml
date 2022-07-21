@@ -28,6 +28,7 @@ toc:
           - en-destination-push.md
           - en-destination-webhook.md
           - en-destination-slack.md
+          - en-destination-msteams.md
       - topic: en-release-notes.md
         navtitle: Release notes
 
@@ -76,8 +77,11 @@ toc:
               label: API Explorer
               href: https://{DomainName}/apidocs/event-notifications
       - topicgroup:
-          label: Event Notifications CLI
+          label: CLI Reference
           topics:
+          - link:
+              label: Event Notifications CLI
+              href: https://{DomainName}/docs/event-notifications-cli-plugin/event-notifications-cli-plugin-event-notifications-cli
           - en-cli.md
       - topicgroup:
           label: High availability and disaster recovery
