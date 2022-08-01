@@ -1024,7 +1024,7 @@ var target = PushMessageBuilder.Target
 const notificationDevicesModel = { 
     user_ids: ['userID1', 'userID2'], 
     fcm_devices: ['deviceID1'], 
-    apns_devices: ['deviceID2'], 
+    apns_devices: ['deviceID2'],
     tags: ['tag1', 'tag2'], 
     platforms: ['push_android', 'push_ios', 'push_chrome', 'push_firefox', 'push_safari'], 
 }; 
@@ -1146,7 +1146,7 @@ const params = {
   ceTime: date, 
   ceIbmenpushto: JSON.stringify(notificationFcmDevicesModel), 
   ceIbmenfcmbody: JSON.stringify(notificationFcmBodyModel), 
-  ceIbmenapnsbody: JSON.stringify(notificationApnsBodyModel), 
+  ceIbmenapnsbody: JSON.stringify(notificationApnsBodyModel),
   ceIbmenapnsheaders: JSON.stringify(apnsHeaders), 
   ceSpecversion: '1.0', 
 }; 
