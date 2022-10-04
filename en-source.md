@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-09-27"
+lastupdated: "2022-10-03"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -31,10 +31,10 @@ A source can publish to multiple topics. In other contexts sources are identifie
 {: #en-ibm-sources-list}
 
 The list of IBM provided sources is as follows:
-- [{{site.data.keyword.monitoringfull_notm}}](https://cloud.ibm.com/docs/monitoring?topic=monitoring-notifications)
-- [{{site.data.keyword.cloud_notm}} Platform Notifications](https://cloud.ibm.com/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list)
-- [{{site.data.keyword.secrets-manager_full_notm}}](https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui)
-- [{{site.data.keyword.compliance_long}}](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui)
+- [{{site.data.keyword.monitoringfull_notm}}](https://{DomainName}/docs/monitoring?topic=monitoring-notifications){: external}
+- [{{site.data.keyword.cloud_notm}} Platform Notifications](https://{DomainName}/docs/account?topic=account-add-users-distribution-list#event-notifications-distribution-list){: external}
+- [{{site.data.keyword.secrets-manager_full_notm}}](https://{DomainName}/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui){: external}
+- [{{site.data.keyword.compliance_long}}](https://{DomainName}/docs/security-compliance?topic=security-compliance-event-notifications&interface=ui){: external}
 
 ## API sources
 {: #en-api-sources}
