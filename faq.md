@@ -48,7 +48,7 @@ Sometimes the devices are marked invalid and deleted from database, if they meet
 
    - `invalidRegistration` - might be due to incorrect registration token format passed to the server.
    - `MismatchSenderID` - a mismatch in the senderID who is not part of the user group that is tied to a registration token.
-   - `NotRegistered` - an invalid registration token due to various reasons (like client app get unregistered with FCM, APNs tokens are invalid, registration token expires, client app updated but the new version not configured to receive messages). 
+   - `NotRegistered` - an invalid registration token due to various reasons (like client app get unregistered with FCM, tokens are invalid, registration token expires, client app updated but the new version not configured to receive messages). 
 
    For more information of error codes, see [FCM error response codes for downstream messages](https://firebase.google.com/docs/cloud-messaging/http-server-ref#error-codes){: external}.
 
