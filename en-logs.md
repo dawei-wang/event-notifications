@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-03"
+lastupdated: "2022-10-26"
 
 keywords: event notifications logDNA, event notifications logging, event notifications external logs
 
@@ -10,18 +10,7 @@ subcollection: event-notifications
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
+{{site.data.keyword.attribute-definition-list}}
 
 # Logging for {{site.data.keyword.en_short}}
 {: #logging}
@@ -39,20 +28,19 @@ Platform logs are logs that are exposed by logging-enabled services and the plat
 
 - Platform logs are regional.
 
-    You can monitor logs from enabled services on the {{site.data.keyword.cloud_notm}} in the region where the service is available.
+   You can monitor logs from enabled services on the {{site.data.keyword.cloud_notm}} in the region where the service is available.
 
 - You can configure one instance only of the {{site.data.keyword.la_short}} service per region to collect platform logs in that location.
 
-    You can have multiple {{site.data.keyword.la_short}} instances in a location. However, only one instance in a location (region) can be configured to receive logs from [enabled services](/docs/log-analysis?topic=log-analysis-cloud_services) in that {{site.data.keyword.cloud_notm}} location.
+   You can have multiple {{site.data.keyword.la_short}} instances in a location. However, only one instance in a location (region) can be configured to receive logs from [enabled services](/docs/log-analysis?topic=log-analysis-cloud_services) in that {{site.data.keyword.cloud_notm}} location.
 
 - To configure a {{site.data.keyword.la_short}} instance, you must set on the `platform logs` configuration setting. Also, you must have the platform role `editor` or higher for the {{site.data.keyword.la_short}} service in your account.
 
-    To enable platform logs, see:
+   To enable platform logs, see:
 
-    - [Configuring platform logs through the Observability dashboard](/docs/log-analysis?topic=log-analysis-config_svc_logs#config_svc_logs_ui)
+   - [Configuring platform logs through the Observability dashboard](/docs/log-analysis?topic=log-analysis-config_svc_logs#config_svc_logs_ui)
 
-    - [Configuring platform logs from the command line](/docs/log-analysis?topic=log-analysis-config_svc_logs#platform_logs_enabling_cli)
-
+   - [Configuring platform logs from the command line](/docs/log-analysis?topic=log-analysis-config_svc_logs#platform_logs_enabling_cli)
 
 For more information about platform logs, see [Configuring IBM Cloud platform logs](/docs/log-analysis?topic=log-analysis-config_svc_logs).
 
