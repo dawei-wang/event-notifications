@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-10-26"
 
 keywords: event notifications, event-notifications, source, tutorials
 
@@ -27,53 +27,54 @@ Add an {{site.data.keyword.en_short}} source. Various services produce events th
 ## Types of sources
 {: #en-add-source-types}
 
-Two types of sources are supported for {{site.data.keyword.en_short}}: IBM-managed sources and generic API sources. 
+Three types of sources are supported for {{site.data.keyword.en_short}}: {{site.data.keyword.cloud_notm}} sources, generic API sources, and {{site.data.keyword.cloud_notm}} platform sources.
 
-With IBM-managed sources, events emit from managed services on {{site.data.keyword.cloud_notm}}. For example, {{site.data.keyword.cloud_notm}} Monitoring, {{site.data.keyword.cloud_notm}} Security and Compliance Center, and {{site.data.keyword.cloud_notm}} Secrets Manager can all be added to {{site.data.keyword.en_short}} IBM-managed sources. 
+With {{site.data.keyword.cloud_notm}} sources, events emit from managed services on {{site.data.keyword.cloud_notm}}. For example, {{site.data.keyword.monitoringfull_notm}}, {{site.data.keyword.cloud_notm}} Security and Compliance Center, and {{site.data.keyword.secrets-manager_full_notm}} can all be added to {{site.data.keyword.en_short}} {{site.data.keyword.cloud_notm}} sources.
 
-To see the current list of {{site.data.keyword.cloud_notm}} services available as {{site.data.keyword.en_short}} sources, go to the `Sources` section of your {{site.data.keyword.en_short}} dashboard, click `Add`, and select `IBM Managed Services`.
-
-With generic API sources, events emanate from services or applications that are not managed by IBM. For example, if you create your own application that sends events to {{site.data.keyword.en_short}}, your application can be added as an API source. 
+With generic API sources, events emanate from services or applications that are not managed by IBM. For example, if you create your own application that sends events to {{site.data.keyword.en_short}}, your application can be added as an API source.
 
 API sources cannot route notifications to the {{site.data.keyword.cloud_notm}} email service and {{site.data.keyword.cloud_notm}} SMS service because these services deliver content that is generated exclusively from {{site.data.keyword.cloud_notm}} managed services.
 {: note}
 
+
+To see the current list of {{site.data.keyword.cloud_notm}} services available as {{site.data.keyword.en_short}} sources, go to the `Sources` section of your {{site.data.keyword.en_short}} dashboard, click `Add`, and select `{{site.data.keyword.cloud_notm}} sources`.
+
 The connection protocols differ between source types, so the procedure for adding is different as described in the following sections.
 
-## Add an IBM-managed source
+## Add an {{site.data.keyword.cloud_notm}} source
 {: #en-add-source-IBM-managed}
 
-## Verify the managed service
+## Verify the {{site.data.keyword.cloud_notm}} service
 {: #en-verify-manage-service}
 {: step}
 
-Verify that the managed service is available as a source for {{site.data.keyword.en_short}}.
+Verify that the {{site.data.keyword.cloud_notm}} service is available as a source for {{site.data.keyword.en_short}}.
 
 - Go to the `Sources` section of the {{site.data.keyword.en_short}} dashboard.
-- Click `Add` and select `IBM Managed Service`.
+- Click `Add` and select `{{site.data.keyword.cloud_notm}} source`.
 - Confirm that the managed service of interest is shown.
 
 ## Create a service authorization
 {: #en-create-service-auth}
 {: step}
 
-Create a service-to-service authorization between your managed service and {{site.data.keyword.en_short}}.
+Create a service-to-service authorization between your {{site.data.keyword.cloud_notm}} service and {{site.data.keyword.en_short}}.
 
 - From the {{site.data.keyword.cloud_notm}} console, select `Manage` >> `Access(IAM)` >> `Authorizations`.
-- The Authorizations view contains dropdowns for `Source service` and `Target service`. Select your managed service as the source, and {{site.data.keyword.en_short}} as the target.
+- The Authorizations view contains drop-down list for `Source service` and `Target service`. Select your {{site.data.keyword.cloud_notm}} service as the source, and {{site.data.keyword.en_short}} as the target.
 - Set the service access level to `Event Source Manager`.
 
-## Find your instance of the managed service
+## Find your instance of the {{site.data.keyword.cloud_notm}} service
 {: #en-find-mg-serv-inst}
 {: step}
 
-- Find your existing service instances in your [account resource list](https://cloud.ibm.com/resources).
+- Find your existing service instances in your [account resource list](https://cloud.ibm.com/resources){: external}.
 - Select the instance of interest and open its dashboard.
 
-If you don't have an existing instance, create one from the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog).
+If you don't have an existing instance, create one from the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog){: external}.
 {: tip}
 
-## Configure your managed service instance to connect to {{site.data.keyword.en_short}}
+## Configure your {{site.data.keyword.cloud_notm}} service instance to connect to {{site.data.keyword.en_short}}
 {: #en-config-mgt-serv-inst}
 {: step}
 
@@ -82,10 +83,10 @@ Follow the documentation for the selected service to configure the connection to
 ## Add a generic API source
 {: #en-add-source-generic-API}
 
-API Sources cannot be used to send notifications to out of the box destinations like email and SMS. 
+API Sources cannot be used to send notifications to out of the box destinations like email and SMS.
 {: note}
 
 - Go to the `Sources` section of the {{site.data.keyword.en_short}} dashboard.
 - Click `Add` and select `API Source`.
 - Type a name and an optional description and click `Add`.
-- Because you are connecting from your own application or service, follow the instructions in the [{{site.data.keyword.en_short}} API documentation](https://cloud.ibm.com/apidocs/event-notifications/event-notifications?code=node) or in the SDK documentation for your programming language to configure the connection.
+- Because you are connecting from your own application or service, follow the instructions in the [{{site.data.keyword.en_short}} API documentation](https://cloud.ibm.com/apidocs/event-notifications/event-notifications?code=node), or in the SDK documentation for your programming language to configure the connection.
