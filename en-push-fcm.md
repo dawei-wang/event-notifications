@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-10-28"
 
 keywords: event-notifications, event notifications, about event notifications, destinations, push
 
@@ -133,7 +133,7 @@ Click `Destinations` in the {{site.data.keyword.en_short}} console and add the f
    - `Pre-production destination` - select this destination as low-cost push destination, for your development and test environments.
    - `Production destination` - use the full capability of this destination. Unlimited devices and outbound messages allowed.
 * Update the FCM Push Credentials with the `Sender ID/Project number` and `Server Key`. You can get these details from your `Firebase Console Project Settings > Cloud Messaging` section.
-* Click **Add**
+* Click **Add**.
 
 ## Create an {{site.data.keyword.en_short}} topic
 {: #en-create-topic-fcm}
