@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-26"
+lastupdated: "2022-11-30"
 
 keywords: event notifications, event-notifications, source, tutorials
 
@@ -36,6 +36,7 @@ With generic API sources, events emanate from services or applications that are 
 API sources cannot route notifications to the {{site.data.keyword.cloud_notm}} email service and {{site.data.keyword.cloud_notm}} SMS service because these services deliver content that is generated exclusively from {{site.data.keyword.cloud_notm}} managed services.
 {: note}
 
+By default, {{site.data.keyword.cloud_notm}} Resource lifecycle events is provided as a source and is disabled. You can enable it, if you like to monitor the {{site.data.keyword.cloud_notm}} Resource lifecycle events, which you need to incur more charges. {{site.data.keyword.cloud_notm}} Resource lifecycle events are events around the {{site.data.keyword.cloud_notm}} resources like instance creation, updating an instance, deleting an instance and other events related to {{site.data.keyword.cloud_notm}} resources.
 
 To see the current list of {{site.data.keyword.cloud_notm}} services available as {{site.data.keyword.en_short}} sources, go to the `Sources` section of your {{site.data.keyword.en_short}} dashboard, click `Add`, and select `{{site.data.keyword.cloud_notm}} sources`.
 
