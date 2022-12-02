@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-16"
+lastupdated: "2022-11-30"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -19,6 +19,16 @@ content-type: release-note
 
 Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, security bulletins, or maintenance notifications? See [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status?selected=status).
 {: note}
+
+## 30 Nov 2022
+{: #event-notifications-Nov3022}
+{: release-note}
+
+New destination: PagerDuty
+:  PagerDuty is now available as a destination. You can send notifications to your PagerDuty destination by using {{site.data.keyword.en_short}}. [Send notifications to your PagerDuty destination by using {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty).
+
+New supported {{site.data.keyword.cloud_notm}} source: {{site.data.keyword.cloud_notm}} Resource lifecycle events
+:  {{site.data.keyword.cloud_notm}} Resource lifecycle events is now available as new supported {{site.data.keyword.cloud_notm}} source. For more information, see [{{site.data.keyword.cloud_notm}} Resource lifecycle events](/docs/event-notifications?topic=event-notifications-en-resource-lifecycle-events).
 
 ## 28 Oct 2022
 {: #event-notifications-Oct2822}

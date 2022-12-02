@@ -17,7 +17,11 @@ toc:
       - en-about.md
       - en-concepts.md
       - en-reln-model.md
-      - en-source.md
+      - topicgroup:
+          label: Event sources
+          topics:
+          - en-source.md
+          - en-resource-lifcycle-events.md
       - en-destination.md
       - topicgroup:
           label: Supported destinations
@@ -45,6 +49,7 @@ toc:
                   href: https://{DomainName}/docs/event-notifications?topic=event-notifications-en-push-safari
           - en-destination-slack.md
           - en-destination-msteams.md
+          - en-destination-pagerduty.md
           - en-destination-webhook.md
           - en-destination-cloud-functions.md
       - topic: en-release-notes.md
