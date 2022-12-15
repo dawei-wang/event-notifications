@@ -24,6 +24,9 @@ Looking for {{site.data.keyword.cloud_notm}} status, platform announcements, sec
 {: #event-notifications-Nov3022}
 {: release-note}
 
+Support for high level encryption: BYOK and KYOK
+:  Support for high level encryption using {{site.data.keyword.keymanagementservicefull}} (Bring Your Own Key - BYOK) and {{site.data.keyword.hscrypto}} (Keep Your Own Key - KYOK). For more information, see [Integrations](/docs/event-notifications?topic=event-notifications-en-integrations).
+
 New destination: PagerDuty
 :  PagerDuty is now available as a destination. You can send notifications to your PagerDuty destination by using {{site.data.keyword.en_short}}. [Send notifications to your PagerDuty destination by using {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-destinations-pagerduty).
 
