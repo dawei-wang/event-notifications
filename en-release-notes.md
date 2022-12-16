@@ -95,7 +95,6 @@ New destination: Microsoft&trade; Teams
 New destination: Slack
 :  Slack is now available as a destination. You can send notifications to your slack channels by using Event Notifications. [Send notifications to your slack channels by using IBM Cloud® Event Notifications](/docs/event-notifications?topic=event-notifications-en-destinations-slack).
 
-
 ## 29 Apr 2022
 {: #event-notifications-Apr2922}
 {: release-note}
