@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-10-26"
+  years: 2020, 2023
+lastupdated: "2023-01-24"
 
 keywords: event-notifications, event notifications, about event notifications
 
@@ -15,7 +15,7 @@ subcollection: event-notifications
 # What is {{site.data.keyword.en_short}}?
 {: #en-about}
 
-{{site.data.keyword.en_full}} is a routing service that provides you about critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like monitoring, to communication channels like email, SMS, and webhooks.
+{{site.data.keyword.en_full}} is a routing service that provides you information about critical events that occur in your {{site.data.keyword.cloud_notm}} account or triggers automated actions by using webhooks. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like monitoring, to communication channels like email, SMS, and webhooks.
 {: shortdesc}
 
 ![Event notifications](images/en-topleveldiagram.png "Event notifications top-level diagram"){: caption="Figure 1. {{site.data.keyword.en_short}}" caption-side="bottom"}
