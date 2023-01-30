@@ -59,7 +59,7 @@ Sometimes the devices are marked invalid and deleted from database, if they meet
    For more information, see [web push protocol](https://web.dev/push-notifications-web-push-protocol/).
 
 
-## What is the difference between {{site.data.keyword.en_short}} Topic Subscriptions and {{site.data.keyword.en_short}} Tag Subsciptions to push devices?
+## What is the difference between {{site.data.keyword.en_short}} Topic Subscriptions and {{site.data.keyword.en_short}} Tag Subscriptions to push devices?
 {: #faq-en-topic-tag-subscriptions}
 {: faq}
 
