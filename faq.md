@@ -30,7 +30,7 @@ A resolution is to add any `TransactionID` or `ReferenceID` to the message body.
 
 - The user opts out. If the user opts out from messaging by sending opt-out text like `Opt Out`, `Stop`, or `Exit`, then messages do not reach that user and the status report states that. The user can send an `Opt in` message to the same source to restart receiving messages.
 
-## Why do some devices are marked invalid and deleted from database?
+## Why are some devices marked invalid and deleted from database?
 {: #faq-en-invalid-device-deletion}
 {: faq}
 
